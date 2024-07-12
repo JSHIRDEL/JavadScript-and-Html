@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>List of Student</h2>
+    <p id="list"></p>
+    <script>
+        const Student=[
+            {name:"ahmad",Grade:20},    
+            {name:"reza",Grade:17},
+            {name:"Arman",Grade:19},
+            {name:"mohamad",Grade:14},
+            {name:"hussin",Grade:12},
+            {name:"ali",Grade:10},
+        ];
+
+        console.log("list student above grade 17:");
+        for(i=0;i<Student.length;i++){
+            if(Student[i].Grade>=17){
+                console.log(Student[i].name);
+            }
+        }
+
+        console.log("list of student below grade 12:");
+        for(i=0;i<Student.length;i++){
+            if(Student[i].Grade<12){
+                console.log(Student[i].name);
+            }
+        }
+
+        console.log("list of student has frist letter a:");
+        for(i=0;i<Student.length;i++){
+            if(Student[i].name.charAt().toLowerCase() == 'a'){
+                console.log(Student[i].name);
+            }
+        }
+
+        var text="";
+        for(i=0;i<Student.length;i++){
+            text+="name:"+Student[i].name +"  ;  " +"grade:" + Student[i].Grade +"<br>";
+        }
+
+        document.getElementById("list").innerHTML = text;
+
+    </script>
+</body>
+</html>
